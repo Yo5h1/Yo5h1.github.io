@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&family=Press+Start+2P&display=swap');
+
+
+/* Estilos base */
+:root {
+    --color-primary: #ff7a00;
+    --color-primary-dark: #e66c00;
+    --color-dark: #17161a;
+    --color-dark-light: #2a292e;
+    --color-text: #ffffff;
+    --color-text-light: rgba(255, 255, 255, 0.9);
+    --color-text-lighter: rgba(255, 255, 255, 0.7);
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    background: url('assets/fondo.png') no-repeat center center fixed;
+    background-size: cover;
+    background-color: #0f0f0f;
+    color: var(--color-text);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding-top: 5rem;
+    line-height: 1.6;
+}
+
+section > div {
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 122, 0, 0.1);
+}
+
+/* Layout */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+@media (min-width: 768px) {
+    .container {
+        padding: 0 2rem;
+    }
+}
+
+main {
+    flex: 1;
+    padding: 4rem 0 3rem;
+}
+
+/* Navbar mejorado */
+nav {
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: transform, background-color, box-shadow;
+}
+
+nav.scrolled {
+    background-color: var(--color-dark) !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    border-bottom-color: var(--color-primary)/10 !important;
+}
+
+
+.nav-link {
+    @apply text-[#ff7a00] hover:text-white transition-all duration-300 ease-out rounded-md px-4 py-2 text-lg font-medium;
+    position: relative;
+}
+
+.nav-link:hover {
+    transform: translateY(-2px);
+    text-shadow: 0 2px 8px rgba(255, 122, 0, 0.4);
+}
+
+.nav-link.active {
+    @apply text-white bg-[#ff7a00] shadow-md;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: var(--color-primary);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-link:hover::after {
+    width: 60%;
+}
+
+/* Menú móvil */
+#mobile-menu {
+    will-change: transform;
+    transform-style: preserve-3d;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100vh;
+    background-color: rgba(23, 22, 26, 0.95);
+    z-index: 40;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out;
+    overflow-y: auto;
+}
+
+
+.mobile-link {
+    @apply text-[#ff7a00] hover:text-white text-2xl font-medium py-3 px-6 rounded-lg transition-all duration-300;
+    transform: translateX(-20px);
+    opacity: 0;
+}
+
+#mobile-menu:not(.translate-y-full) .mobile-link {
+    transform: translateX(0);
+    opacity: 1;
+    transition-delay: calc(var(--i) * 0.1s);
+}
+
+.mobile-link.active {
+    @apply text-white bg-[#ff7a00];
+}
+
+/* Menú desplegable */
+.dropdown-link {
+    @apply block px-4 py-2 text-white hover:bg-[#ff7a00]/20 rounded transition-colors duration-200;
+}
+
+/* Iconos sociales */
+.social-icon {
+    @apply text-[#ff7a00] hover:text-white transition-all duration-300;
+    transform: scale(1);
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0 2px 4px rgba(255, 122, 0, 0.3));
+}
+
+/* Tarjetas de juegos */
+.game-card {
+    @apply transition-all duration-300 hover:transform hover:scale-105;
+}
+
+.game-logo-white {
+    filter: brightness(1) invert(0);
+    max-height: 160px;
+    width: auto;
+    max-width: 100%;
+    transition: transform 0.3s ease;
+}
+
+.game-logo-white:hover {
+    transform: scale(1.05);
+}
+
+/* Animaciones */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), 
+                transform 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+                all 0.6s ease-out;
+}
+
+.animate-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Botón "Volver arriba" */
+#backToTop {
+    transform: translateY(20px);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+#backToTop.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+#backToTop:hover {
+    transform: translateY(-3px) scale(1.05);
+}
+
+/* Scrollbar personalizada */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color-dark);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-primary);
+    border-radius: 4px;
+}
+
+body.menu-open {
+    overflow: hidden;
+}
+
+#mobile-menu.active {
+    transform: translateY(0);
+}
+
+#nav-menu.hidden {
+    display: none !important;
+}
+
+.backdrop-blur-md {
+    backdrop-filter: blur(10px);
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-primary-dark);
+}
+
+/* Efectos hover generales */
+a, button {
+    transition: all 0.3s ease;
+}
+
+/* Textos */
+.text-balance {
+    text-wrap: balance;
+}
+
+/* Secciones */
+section {
+    scroll-margin-top: 6rem;
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+    #mobile-menu .mobile-link:nth-child(1) { --i: 0; }
+    #mobile-menu .mobile-link:nth-child(2) { --i: 1; }
+    #mobile-menu .mobile-link:nth-child(3) { --i: 2; }
+    #mobile-menu .mobile-link:nth-child(4) { --i: 3; }
+
+    #nav-menu {
+        display: none !important;
+    }
+}

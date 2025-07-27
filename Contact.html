@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mandarinas Gaming</title>
+  <link rel="icon" type="image/png" href="assets/icono.png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;500;700&display=swap" rel="stylesheet" />
+</head>
+<body class="text-white font-[Rubik] bg-[#0f0e11]">
+
+  <!-- NAVBAR -->
+  <nav class="bg-[#17161a] p-4 shadow-lg fixed top-0 left-0 w-full z-50">
+    <div class="container mx-auto flex justify-between items-center">
+      <a href="Index.html" class="flex items-center z-50 group">
+        <img src="assets/mandarina-G.png" alt="Mandarinas Gaming Logo" class="h-12 sm:h-16 md:h-20 w-auto transition-all duration-300 group-hover:rotate-[5deg] group-hover:scale-105" />
+      </a>
+      <button id="menu-toggle" aria-label="Menú" class="md:hidden text-[#ff7a00] text-2xl sm:text-3xl focus:outline-none z-50 hover:text-white transition">
+        <i class="fas fa-bars" id="menu-icon"></i>
+      </button>
+      <div id="nav-menu" class="hidden md:flex items-center space-x-2">
+        <div class="flex flex-col md:flex-row items-center md:space-x-4 lg:space-x-6">
+          <a href="index.html#inicio" class="nav-link px-3 py-2 text-sm sm:text-base">Inicio</a>
+          <a href="Nosotros.html" class="nav-link px-3 py-2 text-sm sm:text-base">Nosotros</a>
+          <a href="Contact.html" class="nav-link px-3 py-2 text-sm sm:text-base">Contacto</a>
+        </div>
+        <div class="flex items-center space-x-3 md:space-x-4 lg:space-x-5 ml-2 md:ml-4 border-l border-[#ff7a00]/30 pl-3 md:pl-4">
+          <a href="https://www.instagram.com/mandarina_gaming/" target="_blank" class="social-icon text-xl"><i class="fab fa-instagram"></i></a>
+          <a href="https://discord.gg/" target="_blank" class="social-icon text-xl"><i class="fab fa-discord"></i></a>
+          <a href="https://x.com/" target="_blank" class="social-icon text-xl"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.facebook.com/" target="_blank" class="social-icon text-xl"><i class="fab fa-facebook"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden fixed inset-0 bg-[#17161a]/95 backdrop-blur-md z-40 pt-20 px-6 transform -translate-y-full transition-transform duration-300 ease-in-out">
+      <div class="flex flex-col items-center space-y-6">
+        <a href="index.html#inicio" class="mobile-link text-xl py-3 w-full text-center">Inicio</a>
+        <a href="Nosotros.html" class="mobile-link text-xl py-3 w-full text-center">Nosotros</a>
+        <a href="Contact.html" class="mobile-link text-xl py-3 w-full text-center">Contacto</a>
+        <div class="w-full border-t border-[#ff7a00]/20 pt-6 mt-4">
+          <div class="flex justify-center space-x-6">
+            <a href="https://www.instagram.com/mandarina_gaming/" target="_blank" class="social-icon text-3xl"><i class="fab fa-instagram"></i></a>
+            <a href="https://discord.gg/" target="_blank" class="social-icon text-3xl"><i class="fab fa-discord"></i></a>
+            <a href="https://X.com/" target="_blank" class="social-icon text-3xl"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.facebook.com/" target="_blank" class="social-icon text-3xl"><i class="fab fa-facebook"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- CONTENT -->
+  <div class="flex-grow container mx-auto p-8 mt-32 mb-12 flex flex-col md:flex-row items-start md:space-x-8 animate-on-scroll">
+    <!-- Info -->
+    <div class="md:w-1/2 text-left mb-10 md:mb-0">
+      <h1 class="text-4xl font-bold text-[#ff7a00] mb-6">¿EN QUÉ PODEMOS AYUDARTE?</h1>
+      <p class="text-gray-300 text-lg mb-4 leading-relaxed">Mediante el siguiente formulario envíanos tu mensaje y nos ocuparemos de que sea revisado por el área correspondiente de Mandarinas Gaming.</p>
+      <p class="text-gray-300 text-lg mb-8 leading-relaxed">Por cuestiones comerciales, recomendamos escribirnos a <a href="mailto:mandarinasgaming@gmail.com" class="text-[#ff7a00] hover:underline">mandarinasgaming@gmail.com</a>.</p>
+      <p class="text-gray-300 text-lg mb-4">¡Gracias por interesarte en Mandarinas Gaming!</p>
+      <div class="mt-8">
+        <p class="text-gray-400 mb-2">Síguenos en:</p>
+        <div class="flex space-x-4">
+          <a href="https://www.instagram.com/mandarina_gaming/" target="_blank" class="text-[#ff7a00] hover:text-white"><i class="fab fa-instagram text-2xl"></i></a>
+          <a href="https://discord.gg/" target="_blank" class="text-[#ff7a00] hover:text-white"><i class="fab fa-discord text-2xl"></i></a>
+          <a href="https://x.com/" target="_blank" class="text-[#ff7a00] hover:text-white"><i class="fab fa-twitter text-2xl"></i></a>
+          <a href="https://www.facebook.com/" target="_blank" class="text-[#ff7a00] hover:text-white"><i class="fab fa-facebook text-2xl"></i></a>
+        </div>
+      </div>
+    </div>
+
+<!-- Formulario -->
+<div class="md:w-1/2 w-full max-w-lg mx-auto p-6 bg-gray-800 bg-opacity-90 rounded-2xl shadow-2xl">
+  <h2 class="text-2xl font-bold text-center text-[#ff7a00] mb-6">Contáctanos</h2>
+  <form class="space-y-5">
+    <div>
+      <label for="name" class="block text-sm font-medium text-white mb-1">Nombre</label>
+      <input type="text" id="name" placeholder="Ingresa tu nombre" class="w-full p-3 bg-gray-700 border border-gray-600 rounded-md text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#ff7a00]" required />
+    </div>
+    <div>
+      <label for="email" class="block text-sm font-medium text-white mb-1">Correo electrónico</label>
+      <input type="email" id="email" placeholder="tucorreo@ejemplo.com" class="w-full p-3 bg-gray-700 border border-gray-600 rounded-md text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#ff7a00]" required />
+    </div>
+    <div>
+      <label for="subject" class="block text-sm font-medium text-white mb-1">Asunto</label>
+      <input type="text" id="subject" placeholder="Motivo del mensaje" class="w-full p-3 bg-gray-700 border border-gray-600 rounded-md text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#ff7a00]" required />
+    </div>
+    <div>
+      <label for="message" class="block text-sm font-medium text-white mb-1">Mensaje</label>
+      <textarea id="message" rows="5" placeholder="Escribe tu mensaje aquí..." class="w-full p-3 bg-gray-700 border border-gray-600 rounded-md text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#ff7a00]" required></textarea>
+    </div>
+    <div>
+      <button type="button" onclick="window.location.href='gracias.html'" class="w-full bg-[#ff7a00] hover:bg-[#e66c00] text-white font-semibold py-3 px-6 rounded-md shadow-md transition transform duration-300 hover:scale-105">
+        ENVIAR MENSAJE
+      </button>
+    </div>
+  </form>
+</div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="bg-[#17161a] py-8 text-center text-gray-400 border-t border-[#ff7a00]/10">
+    <p class="text-sm">© 2025 Mandarinas Gaming. Todos los derechos reservados.</p>
+    <div class="mt-2 text-xs text-gray-500">
+      <a href="#" class="hover:text-[#ff7a00] mx-1">Política de Privacidad</a> |
+      <a href="#" class="hover:text-[#ff7a00] mx-1">Términos de Servicio</a>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button id="backToTop" aria-label="Volver arriba" class="fixed bottom-8 right-8 bg-[#ff7a00] text-white w-12 h-12 rounded-full flex items-center justify-center opacity-0 invisible transition-all duration-300 z-[999] shadow-lg hover:bg-[#e66c00] hover:scale-105">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
